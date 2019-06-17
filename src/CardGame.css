@@ -1,0 +1,183 @@
+.cardgame-bg { 
+    width:100%; 
+    height:1300px; 
+    background-attachment: fixed;
+    background-size: 100%; 
+    text-align: center; 
+    background-color: #231f20;
+}
+
+/* TITLE */
+.cardgame-board-title-frame{
+    width: 1100px;
+    margin: auto;
+}
+.cardgame-board-title {
+    color:#f0f2cc; 
+    font-weight: 300; 
+    font-size: 3.0em; 
+    height: 150px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.cardgame-board-title-name{
+    animation: animate-title 3s linear;
+}
+.cardgame-board-title-img {padding-top: 10px;  animation: animate-title 1s linear;}
+.cardgame-board-title-img-reverse {animation: animate-title 1s linear;}
+.cardgame-board-desc {color: #f0f2cc; 
+    font-size: 0.9em; 
+    animation: animate-title 3s linear;}
+
+@keyframes animate-title{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/* BODY */
+.cardgame-board-frame {
+    background-image: url('./imgs/work_cardgame_pokertable.png'); 
+    width: 1100px; 
+    height: 700px; 
+    border: 5px solid #783b16; 
+    border-radius: 180px;
+    margin: auto;
+    margin-top: 50px;
+}
+.cardgame-board-in-desc {
+    width: 50%; 
+    background-color: #231f20; 
+    border:2px solid #fcc05e; 
+    font-size: 0.8em; 
+    color: white; 
+    opacity: 0.8;
+    margin-top: 30px; 
+    margin-bottom: 30px;
+}
+
+/* Card */
+.cardgame-deck-frame {
+    width: 70%; 
+    margin: auto;
+}
+.cardgame-deck {
+    background-color: transparent;
+    width: 100px;
+    height: 160px;
+    perspective: 1000px;
+}
+.cardgame-deck-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+}
+.cardgame-deck-back {
+    z-index: 200;
+}
+.cardgame-deck-front {
+    color: white;
+    transform: rotateY(180deg);
+    z-index: 2;
+}
+.cardgame-deck-front, .cardgame-deck-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.cardgame-deck-back img{
+    width: 100px;
+    height: 150px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+}
+  
+/* GAME DESCRIPTION */
+.cardgame-next-btn {
+    visibility: hidden;
+    position: relative;
+    top: -280px;
+}
+.cardgame-next-btn-btn{
+    background: #c4881b;
+}
+.cardgame-next-btn-btn:hover {
+    background-color: #69490c;
+}
+.cardgame-newgame-frame{
+    background-color: #231f20;
+    width: 400px; 
+    height: 260px; 
+    border: 3px solid #c0aa2e; 
+    border-radius: 50px;
+    margin: auto;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: -400px;
+    transition: all 0.3s linear 0s;
+}
+.cardgame-desc-start h4{
+    font-family: 'Times New Roman', Times, serif;
+}
+.cardgame-desc-start p {
+    margin-top: 50px;
+    opacity: 0.8;
+    font-size: 0.9em;
+}
+.cardgame-desc-btn {
+    background-color: #c4881b;
+    margin-top: 20px;
+    transition: none 0.5s linear 0s;
+}
+.cardgame-desc-btn:hover {
+    background-color: #69490c;
+}
+.cardgame-desc-gameover{
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 90px;
+}
+.cardgame-desc-gameover h4{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
+}
+.cardgame-desc-complete {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 75px;
+}
+.cardgame-desc-complete h4{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 60px;
+    font-size: 2.6em;
+}
+
+.cardgame-mobile {
+    visibility: hidden;
+    color: white;
+    width: 100%;
+}
+
+@media screen and (max-width: 500px) {   /* Whatever size you call "Mobile" */
+    .cardgame-bg {
+        height: 1300px;
+    }
+    .cardgame-board-title-frame{
+        visibility: hidden;
+    }
+    .cardgame-board-frame {
+        visibility: hidden;
+    }
+    .cardgame-mobile {
+        visibility: visible;
+        position: absolute;
+        top: 250px;
+    }
+}
+
